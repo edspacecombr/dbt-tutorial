@@ -34,7 +34,7 @@ services:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=postgres
     ports:
-      - 5432:5432
+      - 5433:5432
     healthcheck:
       test: [ "CMD", "pg_isready", "-U", "postgres" ]
       interval: 1s
@@ -73,7 +73,7 @@ services:
     depends_on:
       - database
     ports:
-      - 8001:8080
+      - 8002:8080
     secrets:
       - ssh_public_key
 
@@ -91,7 +91,7 @@ services:
     depends_on:
       - database
     ports:
-      - 8888:8888
+      - 8889:8888
 
 
     # Airflow Services
@@ -130,7 +130,7 @@ services:
     restart: always
     command: webserver
     ports:
-      - 8080:8080
+      - 8083:8080
     healthcheck:
       test:
         [

@@ -1,0 +1,4 @@
+Log in using the credentials specified in Docker Compose for pgAdmin:
+
+Username: example@email.com
+Password: postgres
